@@ -4,12 +4,12 @@ import Header from './components/header/Header';
 
 export default function App() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="App">
       <Header />
-      <main className="flex-1">
+      <main>
         <h1>React App</h1>
       </main>
-      <Footer className="mt-auto" />
+      <Footer />
     </div>
   )
 }

@@ -9,7 +9,6 @@ const Menu = ({ isOpen, onClose }) => {
     const menuStyle = {
         width: isOpen ? "50%" : "0",
         right: isOpen ? "0" : "-50%",
-        zIndex: isOpen ? "100" : "-1",
     };
 
     return (

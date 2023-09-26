@@ -20,8 +20,8 @@ const Header = () => {
 
   return (
     <div>
-      <div className={overlayStyle + " fixed top-0 left-0 w-3/4 h-screen bg-black opacity-25 z-50 transition-all duration-300 ease-in-out"}></div>
-      <header className="bg-white font-inter">
+      <div className={overlayStyle + " fixed top-0 left-0 w-screen h-screen bg-black opacity-50 z-50"}></div>
+      <header className="bg-white font-inter z-100">
         <div className="container mx-auto flex items-center justify-between">
           <Logo />
           <div className="flex items-center justify-between">
