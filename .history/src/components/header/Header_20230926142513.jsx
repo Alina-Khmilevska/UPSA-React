@@ -1,0 +1,15 @@
+import React from "react";
+
+
+const Header = () => {
+  return (
+    <header className="bg-gray-900 text-white py-4">
+      <div className="container mx-auto flex items-center justify-between">
+        <Logo />
+        <BurgerMenu />
+      </div>
+    </header>
+  );
+};
+
+export default Header;

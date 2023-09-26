@@ -1,0 +1,28 @@
+// Menu.jsx
+import React from "react";
+
+const Menu = ({ isOpen, onClose }) => {
+  const menuStyle = {
+    width: isOpen ? "50%" : "0",
+    right: isOpen ? "0" : "-50%", // Змінено позицію right
+  };
+
+  return (
+    <div
+      className="bg-gray-800 h-full text-white fixed top-0 right-0 transition-all duration-300 ease-in-out"
+      style={menuStyle}
+    >
+      <button className="absolute top-4 left-4" onClick={onClose}> {/* Змінено позицію left */}
+        Close
+      </button>
+      <ul className="mt-12 mr-4"> {/* Змінено margin праворуч */}
+        <li>Menu Item 1</li>
+        <li>Menu Item 2</li>
+        <li>Menu Item 3</li>
+        {/* Додайте інші пункти меню */}
+      </ul>
+    </div>
+  );
+};
+
+export default Menu;
