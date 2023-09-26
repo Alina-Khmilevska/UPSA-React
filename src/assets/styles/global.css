@@ -1,0 +1,15 @@
+.App {
+    text-align: center;
+  }
+  .upsa-bg-grey {
+    background-color: #818181;
+  }
+  .upsa-bg-light-grey {
+    background-color: #B0B0B0;
+  }
+  .upsa-bg-button {
+    background-color: #4A4948;
+  }
+  .img-width {
+    max-width: none;
+  }

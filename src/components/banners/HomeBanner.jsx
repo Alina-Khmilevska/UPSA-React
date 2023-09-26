@@ -14,7 +14,7 @@ const HomeBanner = () => {
                     </p>
                 </div>
             </div>
-            <img src={Img} alt="placeholder" />
+            <img src={Img} alt="placeholder" width="800" height="600" />
         </section>
     );
 };

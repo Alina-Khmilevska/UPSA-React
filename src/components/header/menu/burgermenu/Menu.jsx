@@ -2,8 +2,8 @@
 import React from "react";
 import CloseIcon from "./icons/CloseIcon";
 import SocialIcons from "../../../shared/icons/SocialIcons";
-import "./Menu.css";
 import LanguageIcons from "../../../shared/icons/LanguageIcons";
+import { Link } from "react-router-dom";
 
 const Menu = ({ isOpen, onClose }) => {
     const menuStyle = {
@@ -19,7 +19,7 @@ const Menu = ({ isOpen, onClose }) => {
         >
             <CloseIcon onClick={onClose} />
             <ul className="mt-32 mr-4 text-4xl font-light leading-loose">
-                <li>Проекти</li>
+                <li> <Link to="/projects">Проекти</Link></li>
                 <li>Події</li>
                 <li>Стати членом асоціації</li>
                 <li>EPSA -Student Science ward</li>

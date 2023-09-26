@@ -1,16 +1,17 @@
-import './App.css';
-import HomeBanner from './components/banners/HomeBanner';
-import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AllProjectsPage from "./pages/AllProjectsPage";
 
-export default function App() {
+const App = () => {
   return (
-    <div className="flex flex-col min-h-screen font-inter">
-      <Header />
-      <main className="flex-1 px-16">
-        <HomeBanner />
-      </main>
-      <Footer className="mt-auto" />
-    </div>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/projects" element={<AllProjectsPage />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
