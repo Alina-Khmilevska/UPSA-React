@@ -2,13 +2,15 @@
 import React from "react";
 import Layout from "../components/shared/Layout";
 import HomeBanner from "../components/banners/HomeBanner";
-import NumberBlock from "../components/blocks/homepage/NumberBlock";
+import Number from "../components/blocks/homepage/Number";
+import OurProjects from "../components/blocks/homepage/OurProjects";
 
 const HomePage = () => {
   return (
     <Layout>
       <HomeBanner />
-      <NumberBlock />
+      <Number />
+      <OurProjects />
     </Layout>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import Counter from "../../../utils/ui/Counter";
 
-const NumberBlock = () => {
+const Number = () => {
     const numbers = [
         { value: 1000, text: "Членів організації" },
         { value: 10, text: "Міст України" },
@@ -17,4 +17,4 @@ const NumberBlock = () => {
     );
 };
 
-export default NumberBlock;
+export default Number;
