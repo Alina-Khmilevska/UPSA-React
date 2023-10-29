@@ -6,6 +6,7 @@ import Number from "../components/blocks/homepage/Number";
 import OurProjects from "../components/blocks/homepage/OurProjects";
 import UpsaEvents from "../components/blocks/homepage/Events/UpsaEvents";
 import TitleBlock from "../components/shared/titles/TitleBlock";
+import MembershipForm from "../components/shared/forms/MembershipForm";
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
       <OurProjects />
       <TitleBlock title="UPSA - заходи" />
       <UpsaEvents />
+      <MembershipForm />
     </Layout>
   );
 };
