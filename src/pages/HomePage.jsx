@@ -5,7 +5,7 @@ import HomeBanner from "../components/banners/HomeBanner";
 import Number from "../components/blocks/homepage/Number";
 import OurProjects from "../components/blocks/homepage/OurProjects";
 import UpsaEvents from "../components/blocks/homepage/Events/UpsaEvents";
-import TitleBlock from "../components/titles/TitleBlock";
+import TitleBlock from "../components/shared/titles/TitleBlock";
 
 const HomePage = () => {
   return (
