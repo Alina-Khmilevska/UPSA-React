@@ -1,6 +1,6 @@
 import React from "react";
 import Img from "../../assets/images/tmp/big-image.png";
-import { Link } from "react-router-dom";
+import ExternalButton from "../shared/buttons/ExternalButton";
 
 const HomeBanner = () => {
     return (
@@ -16,13 +16,7 @@ const HomeBanner = () => {
                         </p>
                     </div>
                 </div>
-                <div className="w-1/2">
-                    <button className="upsa-bg-light-button rounded-md px-12 py-4 mt-10">
-                        <Link to="#" className="font-light">
-                            Дізнайся більше про UPSA та її команду
-                        </Link>
-                    </button>
-                </div>
+                <ExternalButton link={'#'} text={'Дізнайся більше про UPSA та її команду'} />
             </div>
             <img src={Img} alt="placeholder" width="800" height="600" />
         </section>

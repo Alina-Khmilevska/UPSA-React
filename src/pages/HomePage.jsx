@@ -5,7 +5,9 @@ import HomeBanner from "../components/banners/HomeBanner";
 import Number from "../components/blocks/homepage/Number";
 import OurProjects from "../components/blocks/homepage/OurProjects";
 import UpsaEvents from "../components/blocks/homepage/Events/UpsaEvents";
-import TitleBlock from "../components/titles/TitleBlock";
+import TitleBlock from "../components/shared/titles/TitleBlock";
+import MembershipForm from "../components/shared/forms/MembershipForm";
+import CardSlider from "../components/shared/sliders/CardSlider";
 
 const HomePage = () => {
   return (
@@ -16,6 +18,8 @@ const HomePage = () => {
       <OurProjects />
       <TitleBlock title="UPSA - заходи" />
       <UpsaEvents />
+      <MembershipForm />
+      <CardSlider />
     </Layout>
   );
 };

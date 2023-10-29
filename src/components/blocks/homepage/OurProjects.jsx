@@ -1,5 +1,6 @@
 import React from "react";
 import Img from "../../../assets/images/tmp/big-image.png";
+import LearnMoreButton from "../../shared/buttons/LearnMoreButton";
 import { Link } from "react-router-dom";
 
 const OurProjects = () => {
@@ -35,9 +36,7 @@ const OurProjects = () => {
             </div>
             <div className="flex flex-col w-2/3 mt-10 justify-center pl-20">
                 <div className="mt-8 text-center w-1/2 ">
-                    <Link to="/projects" className="mt-8 underline text-3xl mb-10">
-                        Дивитися усі проекти
-                    </Link>
+                    <LearnMoreButton text="Дивитися усі проекти" link='/projects' />
                     <Link to="/projects">
                         <svg xmlns="http://www.w3.org/2000/svg" width="130" height="99" viewBox="0 0 130 99" fill="none" className="mx-auto mt-10">
                             <line x1="2.13168e-07" y1="48.5616" x2="129" y2="48.5617" stroke="black" stroke-width="4.87671" />
