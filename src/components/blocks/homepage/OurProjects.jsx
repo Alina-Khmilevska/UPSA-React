@@ -1,52 +1,49 @@
-import React from "react";
-import Img from "../../../assets/images/tmp/big-image.png";
-import LearnMoreButton from "../../shared/buttons/LearnMoreButton";
+import React from 'react';
+import { useDataFetcher } from '../../../redux/hooks/useDataFetcher';
+import API_ENDPOINTS from '../../../redux/endpoints/apiEndpoints';
+import ErrorComponent from '../../../utils/ui/ErrorComponent';
 import { Link } from "react-router-dom";
+import ProjectCard from '../../shared/cards/ProjectCard';
+import ProjectCardLoader from '../../skeletons/ProjectCardLoader';
+import { Button } from 'flowbite-react';
+import { HiOutlineArrowRight } from 'react-icons/hi';
 
 const OurProjects = () => {
-    const items = [
-        { title: 'Pharmbuddy - менторська программа', text: "Opinions showed consistent recognition of the sector’s support for the NHS, with 67% of respondents saying the industry is committed to developing new medicines to meet patient needs." },
-        { title: 'UNMUTE - Podcast', text: "Opinions showed consistent recognition of the sector’s support for the NHS, with 67% of respondents saying the industry is committed to developing new medicines to meet patient needs." },
-        { title: 'Small Talk Show', text: "Opinions showed consistent recognition of the sector’s support for the NHS, with 67% of respondents saying the industry is committed to developing new medicines to meet patient needs." },
-        { title: '??????????????', text: "Opinions showed consistent recognition of the sector’s support for the NHS, with 67% of respondents saying the industry is committed to developing new medicines to meet patient needs." },
-    ];
+    const { data, loading, error } = useDataFetcher(API_ENDPOINTS.PROJECTS);
+    if (loading) {
+        return (
+            <div className="flex flex-row flex-wrap justify-between py-20 px-16">
+                {Array.from({ length: 3 }).map((_, index) => (
+                    <div key={index} className="flex flex-col w-1/3 px-4 mb-8">
+                        <ProjectCardLoader className="h-full" />
+                    </div>
+                ))}
+            </div>
+        );
+    }
 
     return (
-        <section className="flex flex-row flex-wrap justify-between py-20 px-16">
-            {items.slice(0, 3).map((number, index) => (
-                <div key={index} className="flex flex-col w-1/3">
-                    <div key={index} className="mx-2 upsa-bg-block min-h-620">
-                        <img src={Img} alt="" />
-                        <div className="my-6 mx-8">
-                            <h2 className="text-3xl mb-8">{number.title}</h2>
-                            <p>{number.text}</p>
-                        </div>
+        <div>
+            <ErrorComponent error={error} />
 
+            <section className="flex flex-row flex-wrap justify-between py-20 px-16">
+                {data.map((project, index) => (
+                    <div key={index} className="flex flex-col w-1/3 px-4 mb-8">
+                        <ProjectCard project={project} />
                     </div>
-                </div>
-            ))}
-            <div className="flex flex-col w-1/3 mt-10">
-                <div className="mt-8 upsa-bg-block min-h-620">
-                    <img src={Img} alt="" />
-                    <div className="my-6 mx-8">
-                        <h2 className="text-3xl mb-8">{items[3].title}</h2>
-                        <p>{items[3].text}</p>
-                    </div>
-                </div>
-            </div>
-            <div className="flex flex-col w-2/3 mt-10 justify-center pl-20">
-                <div className="mt-8 text-center w-1/2 ">
-                    <LearnMoreButton text="Дивитися усі проекти" link='/projects' />
+                ))}
+                <div className="flex flex-col w-1/2 px-4 mb-8 items-start justify-center">
                     <Link to="/projects">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="130" height="99" viewBox="0 0 130 99" fill="none" className="mx-auto mt-10">
-                            <line x1="2.13168e-07" y1="48.5616" x2="129" y2="48.5617" stroke="black" stroke-width="4.87671" />
-                            <line y1="-2.43836" x2="71.2995" y2="-2.43836" transform="matrix(0.748499 0.663135 -0.237825 0.971308 75.3721 5)" stroke="black" stroke-width="4.87671" />
-                            <line y1="-2.43836" x2="71.2995" y2="-2.43836" transform="matrix(0.748499 -0.663135 -0.237825 -0.971308 75.3721 94)" stroke="black" stroke-width="4.87671" />
-                        </svg>
+                        <Button color="black" className="button-flex inline-flex  items-center justify-center bg-transparent border-">
+                            <span className="inline-flex font-normal text-black text-lg font-semibold"> Дивитися усі проекти
+                            </span>
+                            <HiOutlineArrowRight className="ml-2 mt-10 h-20 w-20 transition-transform duration-200 ease-in-out" />
+                        </Button>
                     </Link>
+
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     );
 };
 

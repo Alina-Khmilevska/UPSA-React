@@ -7,6 +7,7 @@ const API_ENDPOINTS = {
     // Endpoint for retrieving event data.
     // It can be used wherever event data is required by calling API_ENDPOINTS.EVENTS.
     EVENTS: '/upsa-api/events',
+    PROJECTS: '/upsa-api/projects',
 };
 
 // Export the API_ENDPOINTS object so it can be imported and used in other parts of the application.
