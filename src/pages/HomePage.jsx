@@ -8,6 +8,7 @@ import UpsaEvents from "../components/blocks/homepage/Events/UpsaEvents";
 import TitleBlock from "../components/shared/titles/TitleBlock";
 import MembershipForm from "../components/shared/forms/MembershipForm";
 import CardSlider from "../components/shared/sliders/CardSlider";
+import DataFetcher from "../examples/api/DataFetcher";
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
       <UpsaEvents />
       <MembershipForm />
       <CardSlider />
+      <DataFetcher />
     </Layout>
   );
 };
