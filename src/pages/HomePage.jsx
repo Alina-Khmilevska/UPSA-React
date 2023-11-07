@@ -9,6 +9,7 @@ import TitleBlock from "../components/shared/titles/TitleBlock";
 import MembershipForm from "../components/shared/forms/MembershipForm";
 import CardSlider from "../components/shared/sliders/CardSlider";
 import DataFetcher from "../examples/api/DataFetcher";
+import ButtonExample from "../examples/flowbite/ButtonExample";
 
 const HomePage = () => {
   return (
@@ -22,6 +23,7 @@ const HomePage = () => {
       <MembershipForm />
       <CardSlider />
       <DataFetcher />
+      <ButtonExample />
     </Layout>
   );
 };
