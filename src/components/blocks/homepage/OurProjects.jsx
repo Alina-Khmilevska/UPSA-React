@@ -1,16 +1,17 @@
 import React from 'react';
-import { useDataFetcher } from '../../../redux/hooks/useDataFetcher';
-import API_ENDPOINTS from '../../../redux/endpoints/apiEndpoints';
-import ErrorComponent from '../../../utils/ui/ErrorComponent';
 import { Link } from "react-router-dom";
 import ProjectCard from '../../shared/cards/ProjectCard';
 import ProjectCardLoader from '../../skeletons/ProjectCardLoader';
 import { Button } from 'flowbite-react';
 import { HiOutlineArrowRight } from 'react-icons/hi';
+import { useGetOurProjectsQuery } from '../../../redux/api/api.js';
+
 
 const OurProjects = () => {
-    const { data, loading, error } = useDataFetcher(API_ENDPOINTS.PROJECTS);
-    if (loading) {
+
+    const { data, isLoading } = useGetOurProjectsQuery();
+
+    if (isLoading) {
         return (
             <div className="flex flex-row flex-wrap justify-between py-20 px-16">
                 {Array.from({ length: 3 }).map((_, index) => (
@@ -24,7 +25,7 @@ const OurProjects = () => {
 
     return (
         <div>
-            <ErrorComponent error={error} />
+        
 
             <section className="flex flex-row flex-wrap justify-between py-20 px-16">
                 {data.map((project, index) => (

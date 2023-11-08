@@ -1,30 +1,20 @@
+
 import React from "react";
-import TeamMemberCard from "./TeamMemberCard";
-import { useDataFetcher } from '../../../redux/hooks/useDataFetcher';
-import API_ENDPOINTS from '../../../redux/endpoints/apiEndpoints';
-import ErrorComponent from '../../../utils/ui/ErrorComponent';
-import ProjectCardLoader from '../../skeletons/ProjectCardLoader';
 import TitleBlock from '../../shared/titles/TitleBlock';
-
-
+import TeamMemberCard from './TeamMemberCard';
+import { useGetTeamKyivQuery } from '../../../redux/api/api.js';
 
 const OurTeam = () => {
-  const { data, loading, error } = useDataFetcher(API_ENDPOINTS.TEAM_KYIV);
-  if (loading) {
-    return (
-      <div className="flex flex-row flex-wrap justify-between py-20 px-16">
-        {Array.from({ length: 3 }).map((_, index) => (
-          <div key={index} className="flex flex-col w-1/3 px-4 mb-8">
-            <ProjectCardLoader className="h-full" />
-          </div>
-        ))}
-      </div>
-    );
+  const { data, isLoading, error } = useGetTeamKyivQuery();
+  if (isLoading) {
+    return <div>Loading...</div>;
   }
 
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
   return (
     <section className="py-10">
-      <ErrorComponent error={error} />
       <div className="container mx-auto">
         <TitleBlock title="Наша команда" />
         <br></br>
@@ -40,3 +30,4 @@ const OurTeam = () => {
 };
 
 export default OurTeam;
+ 
