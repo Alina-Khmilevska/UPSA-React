@@ -10,6 +10,7 @@ import MembershipForm from "../components/shared/forms/MembershipForm";
 import ButtonExample from "../examples/flowbite/ButtonExample";
 import OurTeam from "../components/blocks/aboutUs/OurTeam";
 import News from "../components/blocks/homepage/News/News";
+import PartnerSliders from "../components/shared/sliders/PartnersSlider";
 
 const HomePage = () => {
   return (
@@ -24,6 +25,8 @@ const HomePage = () => {
       <ButtonExample />
       <OurTeam />
       <News />
+      <TitleBlock title="Наші партнери" />
+      <PartnerSliders />
     </Layout>
   );
 };
