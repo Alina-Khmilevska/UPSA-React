@@ -1,4 +1,6 @@
 import React from 'react';
+import getFullImageUrl from '../../../utils/formatImageUrl';
+
 
 /**
  * `Card` is a reusable React component that displays content in a card layout.
@@ -20,9 +22,23 @@ import React from 'react';
 const Card = ({ imageSrc, title, content }) => {
   return (
     <div className="p-6 border bg-gray-100 rounded-lg shadow-md w-96">
-      {imageSrc && <img src={imageSrc} alt={title} className="w-full rounded-t-lg mb-4" />}
+      {imageSrc && <img src={getFullImageUrl(imageSrc)} alt={title} className="w-full rounded-t-lg mb-4" />}
       {title && <h3 className="text-2xl font-semibold mb-4">{title}</h3>}
       {content && <p className="text-md">{content}</p>}
+      <Card
+        imgSrc={getFullImageUrl(imageSrc)}
+        className="flex flex-col h-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+      >
+        <div
+          className="font-normal text-gray-700 dark:text-gray-400 flex-grow overflow-hidden text-ellipsis"
+          style={{
+            display: '-webkit-box',
+            WebkitLineClamp: 3,
+            WebkitBoxOrient: 'vertical',
+          }}
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      </Card>
     </div>
   );
 };

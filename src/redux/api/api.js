@@ -18,10 +18,14 @@ export const upsaApi = createApi({
     getOurProjects: builder.query({
       query: () => API_ENDPOINTS.PROJECTS,
     }),
+    getNews: builder.query({
+      query: () => API_ENDPOINTS.NEWS,
+    }),
   })
 });
 
 export const {
   useGetTeamKyivQuery,
   useGetOurProjectsQuery,
+  useGetNewsQuery,
 } = upsaApi;

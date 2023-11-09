@@ -7,23 +7,23 @@ import OurProjects from "../components/blocks/homepage/OurProjects";
 import UpsaEvents from "../components/blocks/homepage/Events/UpsaEvents";
 import TitleBlock from "../components/shared/titles/TitleBlock";
 import MembershipForm from "../components/shared/forms/MembershipForm";
-import CardSlider from "../components/shared/sliders/CardSlider";
 import ButtonExample from "../examples/flowbite/ButtonExample";
 import OurTeam from "../components/blocks/aboutUs/OurTeam";
+import News from "../components/blocks/homepage/News/News";
 
 const HomePage = () => {
   return (
     <Layout>
       <HomeBanner />
       <Number />
-      <TitleBlock title="Наші проекти" />
+      <TitleBlock title="Our Projects" />
       <OurProjects />
-      <TitleBlock title="UPSA - заходи" />
+      <TitleBlock title="UPSA - Events" />
       <UpsaEvents />
       <MembershipForm />
-      <CardSlider />
       <ButtonExample />
       <OurTeam />
+      <News />
     </Layout>
   );
 };
