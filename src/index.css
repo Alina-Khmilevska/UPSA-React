@@ -24,3 +24,8 @@
     display: flex;
     flex-direction: column;
 }
+
+.slider-card {
+    padding: 10px;
+    box-sizing: border-box;
+}
