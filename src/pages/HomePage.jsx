@@ -25,7 +25,7 @@ const HomePage = () => {
       <ButtonExample />
       <OurTeam />
       <News />
-      <TitleBlock title="Наші партнери" />
+      <TitleBlock title="Our Partners" />
       <PartnerSliders />
     </Layout>
   );

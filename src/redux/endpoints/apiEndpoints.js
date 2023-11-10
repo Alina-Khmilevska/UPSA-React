@@ -10,6 +10,7 @@ const API_ENDPOINTS = {
     PROJECTS: '/upsa-api/projects',
     TEAM_KYIV: '/upsa-api/team/kyiv',
     NEWS: '/upsa-api/news',
+    PARTNERS: '/upsa-api/partners',
 };
 
 // Export the API_ENDPOINTS object so it can be imported and used in other parts of the application.

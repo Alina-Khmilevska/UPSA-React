@@ -1,29 +1,35 @@
 import React from "react";
 import Slider from "react-slick";
-import Card from "../cards/Card";
+import { useGetPartnersQuery } from '../../../redux/api/api.js';
+import getFullImageUrl from '../../../utils/formatImageUrl';
 
 const PartnerSlider = () => {
+
+  const { data, isLoading } = useGetPartnersQuery();
+
   const settings = {
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
   };
+  if (isLoading) {
+    return (
+      <div>
+        Loading ...
+      </div>
+    );
+  }
 
-  const cardData = [
-    { imageSrc: "/partnerlogo1.jpg" },
-    { imageSrc: "/partnerlogo2.jpg" },
-    { imageSrc: "/partnerlogo3.jpg" },
-    { imageSrc: "/partnerlogo4.jpg" },
-    { imageSrc: "/partnerlogo5.jpg" },
-  ];
 
   return (
     <div className="mt-40">
       <Slider {...settings}>
-        {cardData.map((card, index) => (
-          <Card key={index} content={card.imageSrc} imageSrc={card.imageSrc} /> // content={card.imageSrc} was added into <Card> only for testing if the Slider works correctly, and will be removed after replacing data in const cardData
+        {data.map((card, index) => (
+          <a key={index} href={card.website_url} target="_blank" rel="noreferrer">
+            <img key={index} src={getFullImageUrl(card.logo)} alt={card.title} className="w-40 h-40 mx-auto object-contain" />
+          </a>
         ))}
       </Slider>
     </div>
