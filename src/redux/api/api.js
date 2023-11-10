@@ -21,6 +21,9 @@ export const upsaApi = createApi({
     getNews: builder.query({
       query: () => API_ENDPOINTS.NEWS,
     }),
+    getPartners: builder.query({
+      query: () => API_ENDPOINTS.PARTNERS,
+    }),
   })
 });
 
@@ -28,4 +31,5 @@ export const {
   useGetTeamKyivQuery,
   useGetOurProjectsQuery,
   useGetNewsQuery,
+  useGetPartnersQuery,
 } = upsaApi;
