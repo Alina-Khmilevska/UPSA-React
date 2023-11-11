@@ -11,6 +11,7 @@ import ButtonExample from "../examples/flowbite/ButtonExample";
 import OurTeam from "../components/blocks/aboutUs/OurTeam";
 import News from "../components/blocks/homepage/News/News";
 import PartnerSliders from "../components/shared/sliders/PartnersSlider";
+import LocalRepresentatives from "../components/blocks/aboutUs/LocalRepresentatives";
 
 const HomePage = () => {
   return (
@@ -27,6 +28,7 @@ const HomePage = () => {
       <News />
       <TitleBlock title="Our Partners" />
       <PartnerSliders />
+      <LocalRepresentatives />
     </Layout>
   );
 };
