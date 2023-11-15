@@ -1,24 +1,31 @@
 import React from "react";
-import Img from "../../assets/images/tmp/big-image.png";
 import ExternalButton from "../shared/buttons/ExternalButton";
+import { useGetBlockQuery } from "../../redux/api/api.js";
 
 const HomeBanner = () => {
+    const { data, error, isLoading } = useGetBlockQuery({ type: 'showcase', endpoint: 'homepage' });
+    console.log(data);
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
     return (
         <section className="flex flex-row justify-between">
             <div className="flex flex-col justify-between">
                 <div>
                     <h1 className="text-5xl leading-tight">
-                        Українська студентська асоціація UPSA
+                        {data.title}
                     </h1>
                     <div className="text-2xl mt-6 mr-12">
-                        <p>
-                            Opinions showed consistent recognition of the sector’s support for the NHS, with 67% of respondents saying the industry is committed to developing new medicines to meet patient needs.
-                        </p>
+                        <p dangerouslySetInnerHTML={{ __html: data.body }} />
                     </div>
                 </div>
-                <ExternalButton link={'#'} text={'Дізнайся більше про UPSA та її команду'} />
+                <ExternalButton link={data.link_url} text={data.link_title} />
             </div>
-            <img src={Img} alt="placeholder" width="800" height="600" />
+            <img src={data.image} alt="placeholder" width="800" height="600" />
         </section>
     );
 };

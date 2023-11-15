@@ -1,17 +1,23 @@
 import React from "react";
-import Counter from "../../../utils/ui/Counter";
+import { useGetBlockQuery } from "../../../redux/api/api.js";
 
 const Number = () => {
-    const numbers = [
-        { value: 1000, text: "Членів організації" },
-        { value: 10, text: "Міст України" },
-        { value: 2019, text: "Засновано" },
-    ];
+    const { data, error, isLoading } = useGetBlockQuery({ type: 'statistic', endpoint: 'homepage' });
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
 
     return (
         <section className="flex flex-row justify-between py-40 px-16">
-            {numbers.map((number) => (
-                <Counter number={number.value} title={number.text} />
+            {data.map((number) => (
+                <div className="flex flex-col items-center">
+                    <h3>{number.number}</h3>
+                    <p>{number.title}</p>
+                </div>
             ))}
         </section>
     );
