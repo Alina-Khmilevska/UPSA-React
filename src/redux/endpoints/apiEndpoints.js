@@ -9,7 +9,9 @@ const API_ENDPOINTS = {
   EVENTS: "/upsa-api/events",
   PROJECTS: "/upsa-api/projects",
   TEAM_KYIV: "/upsa-api/team/kyiv",
-  TEAM: "/upsa-api/team/kyiv", // should be changed
+  TEAM_LVIV: "/upsa-api/team/lviv",
+  TEAM_IF: "/upsa-api/team/if",
+  TEAM_KHARKIV: "/upsa-api/team/kharkiv",
   NEWS: "/upsa-api/news",
   PARTNERS: "/upsa-api/partners",
 };
