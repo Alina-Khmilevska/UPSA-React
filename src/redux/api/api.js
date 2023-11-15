@@ -25,6 +25,13 @@ export const upsaApi = createApi({
     getPartners: builder.query({
       query: () => API_ENDPOINTS.PARTNERS,
     }),
+
+    getBlock: builder.query({
+      query: (args) => {
+        const { type, endpoint } = args;
+        return `${API_ENDPOINTS.BLOCK}/${type}/${endpoint}`;
+      },
+    }),
   }),
 });
 
@@ -34,4 +41,5 @@ export const {
   useGetOurProjectsQuery,
   useGetNewsQuery,
   useGetPartnersQuery,
+  useGetBlockQuery,
 } = upsaApi;

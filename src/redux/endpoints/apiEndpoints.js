@@ -12,6 +12,7 @@ const API_ENDPOINTS = {
   TEAM: "/upsa-api/team/kyiv", // should be changed
   NEWS: "/upsa-api/news",
   PARTNERS: "/upsa-api/partners",
+  BLOCK: "/upsa-api/block",
 };
 
 // Export the API_ENDPOINTS object so it can be imported and used in other parts of the application.
