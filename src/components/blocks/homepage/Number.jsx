@@ -13,8 +13,14 @@ const Number = () => {
 
     return (
         <section className="flex flex-row justify-between py-40 px-16">
-            {data.map((number) => (
+            {data.slice(0, 2).map((number) => (
                 <div className="flex flex-col items-center">
+                    <h3>{number.number}</h3>
+                    <p>{number.title}</p>
+                </div>
+            ))}
+             {data.slice(2, 4).map((number) => (
+                <div className="flex flex-col items-center background-grey">
                     <h3>{number.number}</h3>
                     <p>{number.title}</p>
                 </div>
