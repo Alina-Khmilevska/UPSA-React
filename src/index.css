@@ -2,30 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "CenturyGothic";
+  src: url("../public/centuryGothic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .background-grey {
-    background-color: #B0B0B0;
+  background-color: #b0b0b0;
 }
 
 /* Add these styles in your CSS file or in a <style> tag */
 .inline-flex {
-    font-family: 'Inter', sans-serif;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 400;
-    color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
 }
 
 /* Hover effect for the arrow */
 .inline-flex:hover .h-20.w-20 {
-    transform: translateX(20px);
+  transform: translateX(20px);
 }
 
 .button-flex span {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .slider-card {
-    padding: 10px;
-    box-sizing: border-box;
+  padding: 10px;
+  box-sizing: border-box;
 }
