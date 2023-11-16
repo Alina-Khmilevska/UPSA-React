@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 /**
  * # ExternalButton Component
@@ -46,17 +46,17 @@ import { Link } from 'react-router-dom';
  * By following these guidelines, you can use and customize the `ExternalButton` component according to your needs while maintaining consistency and usability across your application.
  */
 
-const ExternalButton = ({ text, link }) => {
-    return (
-        <div className="w-1/2">
-            <button className="upsa-bg-light-button rounded-md px-12 py-4 mt-10">
-                <Link to={link} className="font-light">
-                    {text}
-                </Link>
-            </button>
-        </div>
-
-    );
+const ExternalButton = ({ text, link, element }) => {
+  return (
+    <div>
+      <button className="flex items-center">
+        <Link to={link} className="font-thin">
+          {text}
+        </Link>
+        <div className="ml-[40px]">{element}</div>
+      </button>
+    </div>
+  );
 };
 
 export default ExternalButton;
