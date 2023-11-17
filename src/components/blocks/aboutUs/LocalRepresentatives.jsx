@@ -1,58 +1,63 @@
-// All parts with {phone} should be changed to {city}
-
 import React from "react";
+import TitleBlock from "../../shared/titles/TitleBlock";
 import TeamMemberCard from "./TeamMemberCard";
-import TitleBlock from "../../shared/titles/TitleBlock.jsx";
-import { useGetTeamQuery } from "../../../redux/api/api.js"; //could be changed
+import {
+  useGetTeamLvivQuery,
+  useGetTeamIfQuery,
+  useGetTeamKharkivQuery,
+} from "../../../redux/api/api.js";
 
 const LocalRepresentatives = () => {
-  const { data, isLoading, error } = useGetTeamQuery();
+  const {
+    data: dataLviv,
+    isLoading: isLoadingLviv,
+    error: errorLviv,
+  } = useGetTeamLvivQuery();
 
-  if (isLoading) {
+  const {
+    data: dataIf,
+    isLoading: isLoadingIf,
+    error: errorIf,
+  } = useGetTeamIfQuery();
+
+  const {
+    data: dataKharkiv,
+    isLoading: isLoadingKharkiv,
+    error: errorKharkiv,
+  } = useGetTeamKharkivQuery();
+
+  if (isLoadingLviv || isLoadingIf || isLoadingKharkiv) {
     return <div>Loading...</div>;
   }
 
-  if (error) {
-    return <div>Error: {error}</div>;
+  if (errorLviv || errorIf || errorKharkiv) {
+    return <div>Error: {errorLviv || errorIf || errorKharkiv}</div>;
   }
 
-  const renderMembers = (members, index) => (
-    <TeamMemberCard key={index} {...members} />
-  );
-
-  const renderMembersByCity = () => {
-    /* It creates an array containing the cities (temporary - phone numbers) of all members 
-    and then filters it to include only unique values, ensuring that each city is represented only once in the resulting array. */
-
-    const cities = data
-      .map((member) => member.phone)
-      .filter(
-        (phone, index, citiesArray) => citiesArray.indexOf(phone) === index
-      );
-
-    return cities.map((phone, index) => (
-      <div key={index} className="mb-8">
-        <p className="text-[40px] mb-4 mt-[70px]">
-          {"Placeholder for City"} {phone}
-        </p>
+  return (
+    <section className="py-10">
+      <div className="container mx-auto">
+        <TitleBlock title="Local Representatives" />
+        <p className="text-[40px] mb-[45px] mt-[70px]">Lviv</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {/* It filters the data array to include only members whose city (temporary - phone numbers) matches the current city. */}
-
-          {data
-            .filter((member) => member.phone === phone)
-            .map((member, index) => renderMembers(member, index))}
+          {dataLviv.slice(0, 4).map((member, index) => (
+            <TeamMemberCard key={index} {...member} />
+          ))}
+        </div>
+        <p className="text-[40px] mb-[45px] mt-[70px]">Ivano-Frankivsk</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {dataIf.slice(0, 4).map((member, index) => (
+            <TeamMemberCard key={index} {...member} />
+          ))}
+        </div>
+        <p className="text-[40px] mb-[45px] mt-[70px]">Kharkiv</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {dataKharkiv.slice(0, 4).map((member, index) => (
+            <TeamMemberCard key={index} {...member} />
+          ))}
         </div>
       </div>
-    ));
-  };
-
-  return (
-    <div className="container mx-auto mt-8">
-      <section>
-        <TitleBlock title="Local Representatives" />
-        {renderMembersByCity()}
-      </section>
-    </div>
+    </section>
   );
 };
 

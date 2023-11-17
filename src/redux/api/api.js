@@ -10,11 +10,17 @@ export const upsaApi = createApi({
     baseUrl: apiUrl,
   }),
   endpoints: (builder) => ({
-    getTeam: builder.query({
-      query: () => API_ENDPOINTS.TEAM, // should be changed
-    }),
     getTeamKyiv: builder.query({
       query: () => API_ENDPOINTS.TEAM_KYIV,
+    }),
+    getTeamLviv: builder.query({
+      query: () => API_ENDPOINTS.TEAM_LVIV,
+    }),
+    getTeamIf: builder.query({
+      query: () => API_ENDPOINTS.TEAM_IF,
+    }),
+    getTeamKharkiv: builder.query({
+      query: () => API_ENDPOINTS.TEAM_KHARKIV,
     }),
     getOurProjects: builder.query({
       query: () => API_ENDPOINTS.PROJECTS,
@@ -36,8 +42,10 @@ export const upsaApi = createApi({
 });
 
 export const {
-  useGetTeamQuery, //should be changed
   useGetTeamKyivQuery,
+  useGetTeamLvivQuery,
+  useGetTeamIfQuery,
+  useGetTeamKharkivQuery,
   useGetOurProjectsQuery,
   useGetNewsQuery,
   useGetPartnersQuery,
