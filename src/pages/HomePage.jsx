@@ -12,6 +12,7 @@ import OurTeam from "../components/blocks/aboutUs/OurTeam";
 import News from "../components/blocks/homepage/News/News";
 import PartnerSliders from "../components/shared/sliders/PartnersSlider";
 import LocalRepresentatives from "../components/blocks/aboutUs/LocalRepresentatives";
+import TopProjects from "../components/blocks/homepage/TopProjects";
 
 const HomePage = () => {
   return (
@@ -22,6 +23,7 @@ const HomePage = () => {
       <OurProjects />
       <TitleBlock title="UPSA - Events" />
       <UpsaEvents />
+      <TopProjects />
       <MembershipForm />
       <ButtonExample />
       <OurTeam />
