@@ -22,6 +22,7 @@ module.exports = {
     },
     borderRadius: {
       inputRadius: '30px',
+      mainRadius: '36px',
     },
   },
   corePlugins: {

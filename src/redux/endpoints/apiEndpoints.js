@@ -8,6 +8,7 @@ const API_ENDPOINTS = {
   // It can be used wherever event data is required by calling API_ENDPOINTS.EVENTS.
   EVENTS: "/upsa-api/events",
   PROJECTS: "/upsa-api/projects",
+  TOP_PROJECTS: "/upsa-api/top-projects",
   TEAM_KYIV: "/upsa-api/team/kyiv",
   TEAM: "/upsa-api/team/kyiv", // should be changed
   NEWS: "/upsa-api/news",

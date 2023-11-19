@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ExternalButton = ({ text, link }) => {
   return (
-    <div className="flex mt-[140px] w-[448px] h-[74px] bg-lemon transition duration-300 hover:bg-mint font-['alexandria'] text-[26px] rounded-[36px] items-center justify-end">
+    <div className="flex mt-[140px] w-[448px] h-[74px] bg-lemon transition duration-300 hover:bg-mint font-['alexandria'] text-[26px] rounded-mainRadius items-center justify-end">
       <button className="flex items-center">
         <Link to={link} className="font-thin">
           {text}

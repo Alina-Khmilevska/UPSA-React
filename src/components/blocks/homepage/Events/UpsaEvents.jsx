@@ -1,25 +1,26 @@
 import React from "react";
-import Img from "../../../../assets/images/tmp/big-image.png";
 import EventElement from "./EventElement";
+import { useGetEventsQuery } from "../../../../redux/api/api.js";
 
 const UpsaEvents = () => {
-    const items = [
-        { title: 'Вебінар на тему “Фармацевтична індустрія під час воєнного стану”', text: "Opinions showed consistent recognition of the sector’s support for the NHS, with 67% of respondents saying the industry is committed to developing new medicines to meet patient needs." },
-        { title: 'UNMUTE - Podcast', text: "Opinions showed consistent recognition of the sector’s support for the NHS, with 67% of respondents saying the industry is committed to developing new medicines to meet patient needs." },
-        { title: 'Small Talk Show', text: "Opinions showed consistent recognition of the sector’s support for the NHS, with 67% of respondents saying the industry is committed to developing new medicines to meet patient needs." },
-    ];
+
+    const { data, isLoading } = useGetEventsQuery();
+
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
 
     return (
         <section className="flex flex-row flex-wrap justify-between py-20 px-16">
 
-            {items.slice(0, 3).map((item, index) => (
+            {data.slice(0, 3).map((item, index) => (
                 <EventElement
                     key={index}
-                    imgUrl={Img}
+                    imgUrl={item.image}
                     title={item.title}
-                    body={item.text}
-                    date="24.09.2023"
-                    link="/"
+                    body={item.body}
+                    date={item.date}
+                    link={item.register_url}
                 />
             ))}
         </section>
