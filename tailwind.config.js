@@ -24,6 +24,14 @@ module.exports = {
       inputRadius: '30px',
       mainRadius: '36px',
     },
+    fontFamily: {
+      alexandria: ['Alexandria', 'sans-serif'],
+    },
+    fontSize: {
+      'title': '70px',
+      'subtitle': '40px',
+      'body': '24px',
+    },
   },
   corePlugins: {
     container: false

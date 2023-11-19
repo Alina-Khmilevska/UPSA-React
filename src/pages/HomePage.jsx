@@ -17,7 +17,7 @@ const HomePage = () => {
     <Layout>
       <HomeBanner />
       <Statistic />
-      <TitleBlock title="Our Projects" />
+      <TitleBlock title="ur Projects" isLogo={true} />
       <OurProjects />
       <TitleBlock title="UPSA - Events" />
       <UpsaEvents />
@@ -25,7 +25,7 @@ const HomePage = () => {
       <MembershipForm />
       <ButtonExample />
       <News />
-      <TitleBlock title="Our Partners" />
+      <TitleBlock title="ur Partners" isLogo={true} />
       <PartnerSliders />
     </Layout>
   );
