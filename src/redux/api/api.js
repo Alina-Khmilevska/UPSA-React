@@ -16,8 +16,14 @@ export const upsaApi = createApi({
     getTeamKyiv: builder.query({
       query: () => API_ENDPOINTS.TEAM_KYIV,
     }),
-    getOurProjects: builder.query({
-      query: () => API_ENDPOINTS.PROJECTS,
+    getProjects: builder.query({
+      query: (args) => {
+        const { type } = args;
+        return `${API_ENDPOINTS.PROJECTS}/${type}`;
+      },
+    }),
+    getEvents: builder.query({
+      query: () => API_ENDPOINTS.EVENTS,
     }),
     getNews: builder.query({
       query: () => API_ENDPOINTS.NEWS,
@@ -25,7 +31,6 @@ export const upsaApi = createApi({
     getPartners: builder.query({
       query: () => API_ENDPOINTS.PARTNERS,
     }),
-
     getBlock: builder.query({
       query: (args) => {
         const { type, endpoint } = args;
@@ -38,7 +43,8 @@ export const upsaApi = createApi({
 export const {
   useGetTeamQuery, //should be changed
   useGetTeamKyivQuery,
-  useGetOurProjectsQuery,
+  useGetProjectsQuery,
+  useGetEventsQuery,
   useGetNewsQuery,
   useGetPartnersQuery,
   useGetBlockQuery,
