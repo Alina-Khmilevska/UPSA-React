@@ -34,7 +34,7 @@ const OurProjects = () => {
                 <div className="flex flex-col w-1/2 px-4 mb-8 items-start justify-center">
                     <Link to="/projects">
                         <Button color="black" className="button-flex inline-flex  items-center justify-center bg-transparent border-">
-                            <span className="inline-flex font-normal text-black text-lg font-semibold"> See all projects
+                            <span className="inline-flex text-black text-lg font-semibold"> See all projects
                             </span>
                             <HiOutlineArrowRight className="ml-2 mt-10 h-20 w-20 transition-transform duration-200 ease-in-out" />
                         </Button>

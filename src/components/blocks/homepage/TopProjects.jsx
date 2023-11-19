@@ -18,13 +18,13 @@ const TopProjects = () => {
         <div class="grid grid-cols-2 gap-40 mt-20">
           <div class="relative  border-[6.65px] border-[#DDFF96] rounded-tr-[172.95px] rounded-bl-[172.95px] ">
             <img
-              class="absolute top-10 right-10 h-full w-full rounded-tr-[172.95px] rounded-bl-[172.95px]"
+              class="absolute top-10 right-10 h-full w-full rounded-tr-[172.95px] rounded-bl-[172.95px] min-h-[500px]"
               src={getFullImageUrl(data[0].image)}
               alt={data[0].title}
             />
           </div>
           <div class="mt-20">
-            <p class="text-left text-4xl font-extralight mb-24" dangerouslySetInnerHTML={{ __html: data[0].body }}></p>
+            <p class="text-left text-body font-extralight mb-24" dangerouslySetInnerHTML={{ __html: data[0].body }}></p>
             <div class="flex flex-row items-center ">
               <a href={data[0].link}>
                 <button
@@ -66,7 +66,7 @@ const TopProjects = () => {
         <TitleBlock title={data[1].title} />
         <div class="grid grid-cols-2 gap-40 mt-20">
           <div class="mt-20">
-            <p class="text-left text-4xl font-extralight mb-24" dangerouslySetInnerHTML={{ __html: data[1].body }}></p>
+            <p class="text-left text-body font-extralight mb-24" dangerouslySetInnerHTML={{ __html: data[1].body }}></p>
             <div class="flex flex-row items-center ">
               <a href={data[1].link}>
                 <button
@@ -101,7 +101,7 @@ const TopProjects = () => {
           </div>
           <div class="relative  border-[6.65px] border-[#DDFF96] rounded-tl-[172.95px] rounded-br-[172.95px] ">
             <img
-              class="absolute top-10 left-10 h-full w-full rounded-tl-[172.95px] rounded-br-[172.95px]"
+              class="absolute top-10 left-10 h-full w-full rounded-tl-[172.95px] rounded-br-[172.95px] min-h-[500px]"
               src={getFullImageUrl(data[1].image)}
               alt="Support Ukraine "
             />

@@ -1,10 +1,12 @@
 import React from 'react';
+import LogoIcon from '../../../assets/images/icons/logo_title.svg';
 
-const TitleBlock = ({ title }) => {
+const TitleBlock = ({ title, isLogo }) => {
   return (
-    <h2 className="font-inter text-left font-normal leading-[70px] text-[70px] tracking-normal">
+    <h1 className="font-alexandria text-title text-mainText font-normal leading-normal flex uppercase">
+      {isLogo &&<img src={LogoIcon} alt={title} />}
       {title}
-    </h2>
+    </h1>
   );
 };
 
