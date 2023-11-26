@@ -39,10 +39,10 @@ const TopProjects = () => {
               <a href={data[0].link}>
                 <button
                   type="button"
-                  class="text-black bg-yellow-200 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-thin rounded-mainRadius text-sm p-3 text-center inline-flex items-center me-2  dark:focus:ring-blue-800"
+                  class="text-black bg-yellow-200 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-thin rounded-mainRadius text-sm p-3 text-center inline-flex items-center me-2  dark:focus:ring-blue-800 -rotate-45"
                 >
                   <svg
-                    class="w-8 h-7"
+                    class="w-8 h-8"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -82,10 +82,10 @@ const TopProjects = () => {
                 </button>
                 <button
                   type="button"
-                  class="text-black bg-yellow-200 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-thin rounded-mainRadius text-sm p-3 text-center inline-flex items-center me-2  dark:focus:ring-blue-800"
+                  class="text-black bg-yellow-200 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-thin rounded-mainRadius text-sm p-3 text-center inline-flex items-center me-2  dark:focus:ring-blue-800 -rotate-45"
                 >
                   <svg
-                    class="w-8 h-7"
+                    class="w-8 h-8"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
