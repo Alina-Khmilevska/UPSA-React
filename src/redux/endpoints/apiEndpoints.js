@@ -14,6 +14,7 @@ const API_ENDPOINTS = {
   NEWS: "/upsa-api/news",
   PARTNERS: "/upsa-api/partners",
   BLOCK: "/upsa-api/block",
+  MEMBERSHIP_CREATE: "/upsa-api/membership/create",
 };
 
 // Export the API_ENDPOINTS object so it can be imported and used in other parts of the application.

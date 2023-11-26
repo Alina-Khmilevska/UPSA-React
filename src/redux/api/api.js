@@ -37,6 +37,14 @@ export const upsaApi = createApi({
         return `${API_ENDPOINTS.BLOCK}/${type}/${endpoint}`;
       },
     }),
+    createMembership: builder.mutation({
+      query: (membershipData) => ({
+        url: API_ENDPOINTS.MEMBERSHIP_CREATE,
+        method: 'POST',
+        body: membershipData,
+      }),
+    }),
+
   }),
 });
 
@@ -48,4 +56,5 @@ export const {
   useGetNewsQuery,
   useGetPartnersQuery,
   useGetBlockQuery,
+  useCreateMembershipMutation,
 } = upsaApi;

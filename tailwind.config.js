@@ -18,7 +18,10 @@ module.exports = {
       mint: "#AFDAB6",
       lemon: "#FFE671",
       input: "#DAFFE233",
+      bottomBackground: "#DAFFE2",
       inputBorder: "#9BC6A3",
+      greenFooter: "#5F8A75",
+      darkGreen: "#082D17",
     },
     borderRadius: {
       inputRadius: '30px',
@@ -27,10 +30,14 @@ module.exports = {
     fontFamily: {
       alexandria: ['Alexandria', 'sans-serif'],
     },
+    boxShadow: {
+      formInput: '-1px 1px 4px 0px rgba(0, 0, 0, 0.25)'
+    },
     fontSize: {
       'title': '70px',
       'subtitle': '40px',
       'body': '24px',
+      'input': '20px',
     },
   },
   corePlugins: {

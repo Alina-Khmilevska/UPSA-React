@@ -1,24 +1,22 @@
 import React from "react";
-import LanguageIcons from "../shared/icons/LanguageIcons";
+import LanguageToggle from "../shared/icons/LanguageIcons";
 import SocialIcons from "../shared/icons/SocialIcons";
 
 const Footer = () => {
     return (
-        <footer className="upsa-bg-grey text-white py-12 px-12">
+        <footer className="bg-bottomBackground py-10 text-black px-12">
             <div className="flex flex-row justify-between">
                 <div className="flex flex-col justify-start">
-                    <LanguageIcons />
+                    <LanguageToggle />
                     <p className="text-sm mt-6">
                         &copy;{new Date().getFullYear()} Ukrainian Pharmaceutical Students Assocciation
                     </p>
                 </div>
                 <div className="flex flex-col justify-start">
-                    <p className="text-sm">
-                        Слідкуйте за нами у соціальних мережах:
+                    <p className="text-darkGreen text-body font-normal leading-normal font-century-gothic">
+                    Follolw us on social media
                     </p>
-                    <div className="-mt-6">
                         <SocialIcons />
-                    </div>
                 </div>
             </div>
         </footer>
