@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 /**
  * # LearnMoreButton Component
@@ -60,7 +60,11 @@ import { Link } from 'react-router-dom';
 
 const LearnMoreButton = ({ text, link }) => {
   return (
-    <Link to={link} className="font-inter text-black py-1 px-1 border-b border-black text-3xl font-normal leading-9">
+    <Link
+      to={link}
+      target="_blank"
+      className="font-inter text-black py-1 px-1 border-b border-black text-3xl font-normal leading-9"
+    >
       {text}
     </Link>
   );
