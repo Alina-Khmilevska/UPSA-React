@@ -33,7 +33,7 @@ const CardSlider = ({ slidesToShow = 4, cardData }) => {
                 <img
                   src={getFullImageUrl(project.image)}
                   alt={project.title}
-                  className="w-[345px] h-[192px] rounded-[46px]" // adjust h and w
+                  className="w-[345px] h-[192px] rounded-[46px] object-cover" // adjust h and w
                 />
               </div>
               {/* adjust min-h and min-w */}

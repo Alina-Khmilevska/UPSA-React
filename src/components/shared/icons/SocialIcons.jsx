@@ -1,60 +1,60 @@
 import React from "react";
-import Ellipse from "../../../assets/images/icons/tmp/ellipse.svg";
+import Insta from "../../../assets/images/icons/insta.svg";
 
 const SocialIcons = () => {
     return (
-        <div className="flex justify-start mt-14">
-            <div className="pr-2">
+        <div className="flex justify-start mt-6">
+            <div className="pr-1">
                 <img
-                    src={Ellipse}
+                    src={Insta}
                     alt="Ellipse"
                     width={40}
                     height={40}
                 />
             </div>
-            <div className="px-2">
+            <div className="px-1">
                 <img
-                    src={Ellipse}
+                    src={Insta}
                     alt="Ellipse"
                     width={40}
                     height={40}
                 />
             </div>
-            <div className="px-2">
+            <div className="px-1">
                 <img
-                    src={Ellipse}
+                    src={Insta}
                     alt="Ellipse"
                     width={40}
                     height={40}
                 />
             </div>
-            <div className="px-2">
+            <div className="px-1">
                 <img
-                    src={Ellipse}
+                    src={Insta}
                     alt="Ellipse"
                     width={40}
                     height={40}
                 />
             </div>
-            <div className="px-2">
+            <div className="px-1">
                 <img
-                    src={Ellipse}
+                    src={Insta}
                     alt="Ellipse"
                     width={40}
                     height={40}
                 />
             </div>
-            <div className="px-2">
+            <div className="px-1">
                 <img
-                    src={Ellipse}
+                    src={Insta}
                     alt="Ellipse"
                     width={40}
                     height={40}
                 />
             </div>
-            <div className="px-2">
+            <div className="px-1">
                 <img
-                    src={Ellipse}
+                    src={Insta}
                     alt="Ellipse"
                     width={40}
                     height={40}

@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <div>
       <div className={overlayStyle + " fixed top-0 left-0 w-3/4 h-screen bg-black opacity-25 z-50 transition-all duration-500 ease"}></div>
-      <header className="bg-white font-inter py-10 border-b-2 border-mint">
+      <header className="bg-white font-inter py-10 border-b-2 border-mint container mx-auto">
         <div className="flex justify-between">
           <Logo />
           <SearchBar />

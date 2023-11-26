@@ -62,7 +62,6 @@ const LearnMoreButton = ({ text, link }) => {
   return (
     <Link
       to={link}
-      target="_blank"
       className="font-inter text-black py-1 px-1 border-b border-black text-3xl font-normal leading-9"
     >
       {text}
