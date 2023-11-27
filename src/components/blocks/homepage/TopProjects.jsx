@@ -4,8 +4,7 @@ import { useGetProjectsQuery } from "../../../redux/api/api.js";
 import getFullImageUrl from "../../../utils/formatImageUrl.js";
 
 const TopProjects = () => {
-
-  const { data, isLoading } = useGetProjectsQuery({ type: "top"});
+  const { data, isLoading } = useGetProjectsQuery({ type: "top" });
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -23,8 +22,11 @@ const TopProjects = () => {
               alt={data[0].title}
             />
           </div>
-          <div class="mt-20">
-            <p class="text-left text-body font-extralight mb-24" dangerouslySetInnerHTML={{ __html: data[0].body }}></p>
+          <div class="mt-10 mb-40">
+            <p
+              class="text-left text-body font-extralight mb-28 "
+              dangerouslySetInnerHTML={{ __html: data[0].body }}
+            ></p>
             <div class="flex flex-row items-center ">
               <a href={data[0].link}>
                 <button
@@ -37,10 +39,10 @@ const TopProjects = () => {
               <a href={data[0].link}>
                 <button
                   type="button"
-                  class="text-black bg-yellow-200 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-thin rounded-mainRadius text-sm p-3 text-center inline-flex items-center me-2  dark:focus:ring-blue-800"
+                  class="text-black bg-yellow-200 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-thin rounded-mainRadius text-sm p-3 text-center inline-flex items-center me-2  dark:focus:ring-blue-800 -rotate-45"
                 >
                   <svg
-                    class="w-8 h-7"
+                    class="w-8 h-8"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -62,11 +64,14 @@ const TopProjects = () => {
         </div>
       </div>
 
-      <div class="px-10 mb-20 mt-40">
+      <div class="px-10 mb-60 mt-40">
         <TitleBlock title={data[1].title} />
-        <div class="grid grid-cols-2 gap-40 mt-20">
-          <div class="mt-20">
-            <p class="text-left text-body font-extralight mb-24" dangerouslySetInnerHTML={{ __html: data[1].body }}></p>
+        <div class="grid grid-cols-2 gap-40 mt-10">
+          <div class="mt-28 mb-40 ">
+            <p
+              class="text-left text-body font-extralight mb-24"
+              dangerouslySetInnerHTML={{ __html: data[1].body }}
+            ></p>
             <div class="flex flex-row items-center ">
               <a href={data[1].link}>
                 <button
@@ -77,10 +82,10 @@ const TopProjects = () => {
                 </button>
                 <button
                   type="button"
-                  class="text-black bg-yellow-200 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-thin rounded-mainRadius text-sm p-3 text-center inline-flex items-center me-2  dark:focus:ring-blue-800"
+                  class="text-black bg-yellow-200 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-thin rounded-mainRadius text-sm p-3 text-center inline-flex items-center me-2  dark:focus:ring-blue-800 -rotate-45"
                 >
                   <svg
-                    class="w-8 h-7"
+                    class="w-8 h-8"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -110,7 +115,6 @@ const TopProjects = () => {
       </div>
     </>
   );
-}
-
+};
 
 export default TopProjects;
