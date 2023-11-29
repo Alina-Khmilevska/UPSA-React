@@ -44,7 +44,9 @@ export const upsaApi = createApi({
         body: membershipData,
       }),
     }),
-
+    getMenu: builder.query({
+      query: () => API_ENDPOINTS.MENU,
+    }),
   }),
 });
 
@@ -57,4 +59,5 @@ export const {
   useGetPartnersQuery,
   useGetBlockQuery,
   useCreateMembershipMutation,
+  useGetMenuQuery,
 } = upsaApi;

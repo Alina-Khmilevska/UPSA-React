@@ -22,6 +22,7 @@ module.exports = {
       inputBorder: "#9BC6A3",
       greenFooter: "#5F8A75",
       darkGreen: "#082D17",
+      backgroundOpenMenu: "rgba(95, 138, 117, 0.71)",
     },
     borderRadius: {
       inputRadius: '30px',
@@ -36,6 +37,7 @@ module.exports = {
     fontSize: {
       'title': '70px',
       'subtitle': '40px',
+      'menu': '44px',
       'body': '24px',
       'input': '20px',
     },
