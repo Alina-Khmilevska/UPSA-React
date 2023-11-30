@@ -20,7 +20,7 @@ const UpsaEvents = () => {
                     title={item.title}
                     body={item.body}
                     date={item.date}
-                    link={item.register_url}
+                    id={item.id}
                 />
             ))}
         </section>

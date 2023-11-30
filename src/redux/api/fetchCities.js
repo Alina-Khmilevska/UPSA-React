@@ -7,7 +7,6 @@ const fetchCities = async () => {
           'X-RapidAPI-Host': process.env.REACT_APP_RAPIDAPI_HOST
         }
       });
-      console.log(response);
   
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

@@ -23,6 +23,7 @@ module.exports = {
       greenFooter: "#5F8A75",
       darkGreen: "#082D17",
       backgroundOpenMenu: "rgba(95, 138, 117, 0.71)",
+      red: "#FF0000",
     },
     borderRadius: {
       inputRadius: '30px',

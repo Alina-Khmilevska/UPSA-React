@@ -44,6 +44,13 @@ export const upsaApi = createApi({
         body: membershipData,
       }),
     }),
+    registerParticipant: builder.mutation({
+      query: (participantData) => ({
+        url: API_ENDPOINTS.PARTICIPANT_CREATE,
+        method: 'POST',
+        body: participantData,
+      }),
+    }),
     getMenu: builder.query({
       query: () => API_ENDPOINTS.MENU,
     }),
@@ -59,5 +66,6 @@ export const {
   useGetPartnersQuery,
   useGetBlockQuery,
   useCreateMembershipMutation,
+  useRegisterParticipantMutation,
   useGetMenuQuery,
 } = upsaApi;

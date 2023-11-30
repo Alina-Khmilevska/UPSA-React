@@ -1,7 +1,19 @@
+import React, { useState } from 'react';
 import getFullImageUrl from "../../..//../utils/formatImageUrl.js";
+import RegistrationModal from './RegistrationModal';
+
 
 const EventElement = (props) => {
-  const { imgUrl, title, body, date, link } = props;
+  const { imgUrl, title, body, date, id } = props;
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    closeModal();
+  };
 
   return (
     <div className="text-left text-[32px] text-black font-inter w-[30%] background-grey flex flex-col justify-between">
@@ -21,11 +33,15 @@ const EventElement = (props) => {
           <i className=" text-[22px] inline-block font-light ">
             {date}
           </i>
-          <div className=" text-[18px] text-white bg-black w-[200px] h-[40px] flex justify-center items-center">
-            <a href={link}>Register to the webinar</a>
+          <div
+            className="cursor-pointer text-[18px] text-white bg-black w-[200px] h-[40px] flex justify-center items-center"
+            onClick={openModal}
+          >
+            Register to the webinar
           </div>
         </div>
       </div>
+      <RegistrationModal isOpen={isModalOpen} onClose={closeModal} onSubmit={handleSubmit} title={title} id={id} />
     </div>
   );
 };
