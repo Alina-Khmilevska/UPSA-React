@@ -19,9 +19,9 @@ const AllProjectsPage = () => {
             <div className="mt-[100px]"></div>
             <TitleBlock title="ur Projects" isLogo={true} />
             <div className="flex flex-col">
-                {data.map((project, index) => (
+                {data.map((project) => (
                     <div className="flex flex-row items-inherit justify-start min-w-full  bg-green-100 rounded-[80px] my-[30px] pl-[50px] py-[50px]">
-                        <img className="rounded-[80px] w-[500px] mx-auto" alt={project.title} src={getFullImageUrl(project.image)}></img>
+                        <img className="rounded-[80px] w-[500px] mx-auto object-cover" alt={project.title} src={getFullImageUrl(project.image)}></img>
                         <div className="flex flex-col justify-between px-4 py-10 w-[75%]">
                             <div className="w-full px-4 py-2 mt-4">
                                 <h1 className="text-black text-subtitle font-medium">{project.title}</h1>
