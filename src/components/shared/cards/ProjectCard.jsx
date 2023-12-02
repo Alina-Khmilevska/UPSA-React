@@ -11,7 +11,7 @@ const ProjectCard = ({ project }) => {
         className="flex flex-col h-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg p-8 bg-[#DAFFE2] rounded-t-mainRadius rounded-bl-mainRadius rounded-br-[40px]"
         renderImage={() => (
           <img
-            className="rounded-mainRadius max-w-[100%] h-[35%] "
+            className="rounded-mainRadius max-w-[100%] h-[35%] object-cover"
             src={getFullImageUrl(project.image)}
             alt={getFullImageUrl(project.image)}
           />
